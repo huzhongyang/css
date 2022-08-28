@@ -1,0 +1,56 @@
+<script setup lang="ts"></script>
+
+<template>
+	<div class="wrapper">
+		<aside>
+			<router-link to="/">
+				<h2>Learn CSS</h2>
+			</router-link>
+			<div class="link-list">
+				<router-link :to="{name:'checkBrowser'}">checkBrowser</router-link>
+			</div>
+		</aside>
+		<main>
+			<router-view />
+		</main>
+	</div>
+</template>
+
+<style scoped>
+    .wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 10px;
+
+        height: 100vh;
+    }
+
+    aside {
+        background-color: #dcc7c4;
+        flex: 0 0 150px;
+        padding: 15px;
+    }
+
+    .link-list {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 5px;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
+
+    .link-list a {
+        background-color: cornflowerblue;
+        border-radius: 6px;
+        padding: 4px;
+    }
+
+    main {
+        flex: 1 0 auto;
+
+        padding: 15px;
+    }
+</style>
