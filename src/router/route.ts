@@ -9,6 +9,10 @@ export const routes: RouteRecordRaw[] = [
                 name: 'checkBrowser',
                 component: () => import('../components/22-08-28/CheckBrowser.vue'),
                 path: 'checkBrowser',
+            }, {
+                name: 'volumeBar',
+                component: () => import('../components/22-08-29/VolumeBar.vue'),
+                path: 'volumeBar',
             },
         ],
     },

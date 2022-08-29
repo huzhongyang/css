@@ -7,7 +7,8 @@
 				<h2>Learn CSS</h2>
 			</router-link>
 			<div class="link-list">
-				<router-link :to="{name:'checkBrowser'}">checkBrowser</router-link>
+				<router-link :to="{name:'checkBrowser'}">check browser</router-link>
+				<router-link :to="{name:'volumeBar'}">volume bar</router-link>
 			</div>
 		</aside>
 		<main>
