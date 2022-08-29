@@ -1,5 +1,6 @@
 <script setup lang="ts">
-    import { Ref, ref } from 'vue'
+
+    import { Ref } from 'vue'
 
     const rangeInputRef = ref() as Ref<HTMLInputElement>
     const volume = ref('25')
@@ -41,7 +42,7 @@
     }
 
     section span::after {
-        content: '%';
+        content: "%";
     }
 
     input[type="range"] {

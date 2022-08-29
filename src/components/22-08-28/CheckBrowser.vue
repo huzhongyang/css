@@ -1,6 +1,4 @@
 <script setup lang="ts">
-    import { onMounted } from 'vue'
-
     function getBrowser() {
         const userAgent = navigator.userAgent.toLowerCase()
         if (userAgent.includes('edg')) {
