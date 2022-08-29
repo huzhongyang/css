@@ -11,18 +11,34 @@
 			</div>
 		</aside>
 		<main>
-			<router-view />
+			<!-- router-view 搭配 transition 写法 -->
+			<router-view v-slot="{Component}">
+				<transition>
+					<component :is="Component" />
+				</transition>
+			</router-view>
 		</main>
 	</div>
 </template>
 
 <style scoped>
+    .v-enter-active,
+    .v-leave-active {
+        transition: opacity 0.5s ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        opacity: 0;
+    }
+
     .wrapper {
         display: flex;
         flex-flow: row nowrap;
         gap: 10px;
 
         height: 100vh;
+        border-radius: 10px;
     }
 
     aside {
