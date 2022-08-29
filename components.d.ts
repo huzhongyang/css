@@ -6,11 +6,13 @@ import '@vue/runtime-core'
 export {}
 
 declare module '@vue/runtime-core' {
-    export interface GlobalComponents {
-        CheckBrowser: typeof import('./src/components/22-08-28/CheckBrowser.vue')['default']
-        Home: typeof import('./src/components/Home.vue')['default']
-        RouterLink: typeof import('vue-router')['RouterLink']
-        RouterView: typeof import('vue-router')['RouterView']
-        VolumeBar: typeof import('./src/components/22-08-29/VolumeBar.vue')['default']
-    }
+  export interface GlobalComponents {
+    CheckBrowser: typeof import('./src/components/22-08-28/CheckBrowser.vue')['default']
+    Home: typeof import('./src/components/Home.vue')['default']
+    IMaterialSymbols10mpOutlineRounded: typeof import('~icons/material-symbols/10mp-outline-rounded')['default']
+    IMaterialSymbols4kPlusRounded: typeof import('~icons/material-symbols/4k-plus-rounded')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
+    VolumeBar: typeof import('./src/components/22-08-29/VolumeBar.vue')['default']
+  }
 }

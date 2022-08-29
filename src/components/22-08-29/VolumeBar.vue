@@ -9,6 +9,7 @@
 
 <template>
 	<div class="wrapper">
+		<i-material-symbols-4k-plus-rounded />
 		<section>
 			<span>{{ volume }}</span>
 			<input v-model="volume" type="range" min="0" max="100" ref="rangeInputRef">
