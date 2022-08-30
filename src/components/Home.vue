@@ -9,6 +9,7 @@
 			<div class="link-list">
 				<router-link :to="{name:'checkBrowser'}">check browser</router-link>
 				<router-link :to="{name:'volumeBar'}">volume bar</router-link>
+				<router-link :to="{name:'tabBar'}">tab bar</router-link>
 			</div>
 		</aside>
 		<main>

@@ -13,6 +13,10 @@ export const routes: RouteRecordRaw[] = [
                 name: 'volumeBar',
                 component: () => import('../components/22-08-29/VolumeBar.vue'),
                 path: 'volumeBar',
+            }, {
+                name: 'tabBar',
+                path: 'tabBar',
+                component: () => import('../components/22-08-30/TabBar.vue'),
             },
         ],
     },

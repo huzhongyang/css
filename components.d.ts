@@ -9,10 +9,18 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     CheckBrowser: typeof import('./src/components/22-08-28/CheckBrowser.vue')['default']
     Home: typeof import('./src/components/Home.vue')['default']
+    ICarbonUserProfile: typeof import('~icons/carbon/user-profile')['default']
+    IIcRoundHome: typeof import('~icons/ic/round-home')['default']
     IMaterialSymbols10mpOutlineRounded: typeof import('~icons/material-symbols/10mp-outline-rounded')['default']
     IMaterialSymbols4kPlusRounded: typeof import('~icons/material-symbols/4k-plus-rounded')['default']
+    ITablerHome: typeof import('~icons/tabler/home')['default']
+    ITablerMessageCircle: typeof import('~icons/tabler/message-circle')['default']
+    ITablerPhoto: typeof import('~icons/tabler/photo')['default']
+    ITablerSettings: typeof import('~icons/tabler/settings')['default']
+    ITablerUser: typeof import('~icons/tabler/user')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    TabBar: typeof import('./src/components/22-08-30/TabBar.vue')['default']
     VolumeBar: typeof import('./src/components/22-08-29/VolumeBar.vue')['default']
   }
 }

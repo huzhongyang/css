@@ -86,4 +86,10 @@
     margin: 0;
     padding: 0;
     font-family: "SF Pro Rounded", system-ui;
+    box-sizing: border-box;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }
