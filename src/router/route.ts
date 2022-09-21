@@ -17,6 +17,10 @@ export const routes: RouteRecordRaw[] = [
                 name: 'tabBar',
                 path: 'tabBar',
                 component: () => import('../components/22-08-30/TabBar.vue'),
+            }, {
+                name: 'marqueeDiv',
+                path: 'marqueeDiv',
+                component: () => import('../components/22-09-21/MarqueeDiv.vue'),
             },
         ],
     },

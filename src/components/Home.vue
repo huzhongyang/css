@@ -10,13 +10,14 @@
 				<router-link :to="{name:'checkBrowser'}">check browser</router-link>
 				<router-link :to="{name:'volumeBar'}">volume bar</router-link>
 				<router-link :to="{name:'tabBar'}">tab bar</router-link>
+				<router-link :to="{name:'marqueeDiv'}">marquee div</router-link>
 			</div>
 		</aside>
 		<main>
 			<!-- router-view 搭配 transition 写法 -->
 			<router-view v-slot="{Component}">
 				<transition>
-					<component :is="Component" />
+					<component :is="Component"/>
 				</transition>
 			</router-view>
 		</main>

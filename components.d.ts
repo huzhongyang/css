@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     ITablerPhoto: typeof import('~icons/tabler/photo')['default']
     ITablerSettings: typeof import('~icons/tabler/settings')['default']
     ITablerUser: typeof import('~icons/tabler/user')['default']
+    MarqueeDiv: typeof import('./src/components/22-09-21/MarqueeDiv.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TabBar: typeof import('./src/components/22-08-30/TabBar.vue')['default']
