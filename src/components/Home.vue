@@ -71,5 +71,6 @@
         flex: 1 0 auto;
 
         padding: 15px;
+        overflow: scroll;
     }
 </style>
