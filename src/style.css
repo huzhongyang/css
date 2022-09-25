@@ -80,6 +80,9 @@
 /*   } */
 /* } */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
     border: 0;
