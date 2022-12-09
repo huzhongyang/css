@@ -7,6 +7,8 @@
     <div class="marquee">
       <div class="content">1</div>
     </div>
+    <div class="ml-2 bg-amber-300 dark:bg-slate-800 dark:rounded-2xl">Tailwind CSS</div>
+    <input type="color">
   </div>
 </template>
 
