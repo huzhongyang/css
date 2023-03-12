@@ -19,11 +19,12 @@
     </aside>
     <main>
       <!-- router-view 搭配 transition 写法 -->
-      <transition>
-        <router-view v-slot="{Component}">
+
+      <router-view v-slot="{Component}">
+        <transition name="fade" mode="out-in">
           <component :is="Component" />
-        </router-view>
-      </transition>
+        </transition>
+      </router-view>
     </main>
   </div>
 </template>
