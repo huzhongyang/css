@@ -1,10 +1,6 @@
-<script>
-  import {defineComponent} from 'vue'
-  import LearnSCSS from './22-12-17/LearnSCSS.vue'
+<script setup lang="ts">
+  const menu = ref(['checkBrowser', 'volumeBar', 'tabBar', 'marqueeDiv', 'learnSCSS'])
 
-  export default defineComponent({
-    components: { LearnSCSS }
-  })
 </script>
 
 <template>
@@ -14,11 +10,11 @@
         <h2>Learn CSS</h2>
       </router-link>
       <div class="link-list">
-        <router-link :to="{name:'checkBrowser'}">check browser</router-link>
-        <router-link :to="{name:'volumeBar'}">volume bar</router-link>
-        <router-link :to="{name:'tabBar'}">tab bar</router-link>
-        <router-link :to="{name:'marqueeDiv'}">marquee div</router-link>
-        <router-link :to="{name:'learnSCSS'}">learn SCSS</router-link>
+        <router-link v-for="(name,index) in menu"
+                     :key=index
+                     :to="{name}">
+          {{ name }}
+        </router-link>
       </div>
     </aside>
     <main>
