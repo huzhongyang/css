@@ -1,8 +1,8 @@
-import vue              from '@vitejs/plugin-vue'
-import AutoImport       from 'unplugin-auto-import/vite'
-import IconsResolver    from 'unplugin-icons/resolver'
-import Icons            from 'unplugin-icons/vite'
-import Components       from 'unplugin-vue-components/vite'
+import vue from '@vitejs/plugin-vue'
+import AutoImport from 'unplugin-auto-import/vite'
+import IconsResolver from 'unplugin-icons/resolver'
+import Icons from 'unplugin-icons/vite'
+import Components from 'unplugin-vue-components/vite'
 import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
@@ -35,6 +35,8 @@ export default defineConfig({
                 'vue-router',
             ],
         }),
-        vue(),
+        vue({
+            reactivityTransform: true,
+        }),
     ],
 })
