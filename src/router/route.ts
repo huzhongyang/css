@@ -1,8 +1,8 @@
-import { RouteRecordRaw } from 'vue-router'
+import {RouteRecordRaw} from 'vue-router'
 
 
 export const routes: RouteRecordRaw[] = [
-    { redirect: '/home', path: '/' },
+    {redirect: '/home', path: '/'},
     {
         name: 'home', component: () => import('../components/Home.vue'), path: '/home', children: [
             {
@@ -21,6 +21,10 @@ export const routes: RouteRecordRaw[] = [
                 name: 'marqueeDiv',
                 path: 'marqueeDiv',
                 component: () => import('../components/22-09-21/MarqueeDiv.vue'),
+            }, {
+                name: 'learnSCSS',
+                path: 'learnSCSS',
+                component: () => import('../components/22-12-17/LearnSCSS.vue'),
             },
         ],
     },
