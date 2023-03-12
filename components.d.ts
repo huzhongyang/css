@@ -26,5 +26,6 @@ declare module '@vue/runtime-core' {
     RouterView: typeof import('vue-router')['RouterView']
     TabBar: typeof import('./src/components/22-08-30/TabBar.vue')['default']
     VolumeBar: typeof import('./src/components/22-08-29/VolumeBar.vue')['default']
+    ZWeather: typeof import('./src/components/23-03-12/ZWeather.vue')['default']
   }
 }

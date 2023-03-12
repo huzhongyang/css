@@ -26,6 +26,10 @@ export const routes: RouteRecordRaw[] = [
                 name: 'learnSCSS',
                 path: 'learnSCSS',
                 component: () => import('../components/22-12-17/LearnSCSS.vue'),
+            }, {
+                name: 'weather',
+                path: 'weather',
+                component: () => import('../components/23-03-12/ZWeather.vue'),
             },
         ],
     },
