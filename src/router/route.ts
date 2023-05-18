@@ -34,6 +34,10 @@ export const routes: RouteRecordRaw[] = [
                 name:'vrView',
                 path:'vrView',
                 component:()=>import('../components/23-05-04/VrView.vue'),
+            },{
+                name:'plumBlossom',
+                path:'plumBlossom',
+                component:()=>import('../components/PlumBossom.vue'),
             }
         ],
     },
