@@ -7,7 +7,8 @@
   const clearInputHidden = computed(() => searchCity === '')
   const searchCityRef = $ref<HTMLInputElement>()
   let citys = $ref<City[]>([])
-  let citysDivVisited = computed(() => citys?.length !== 0)
+  let citysDivHidden = $ref(true)
+  let haveData = computed(() => citys.length !== 0)
 
   function getWeather() {
     console.log(searchCity)
@@ -21,8 +22,13 @@
 
   onMounted(() => {
     searchCityRef!.focus()
-    searchCityRef!.addEventListener('change', async () => {
-      citys = await getCitys(searchCity) ?? []
+    searchCityRef!.addEventListener('input', async () => {
+      citysDivHidden = !citysDivHidden
+      citys = await getCitys(searchCity)
+      await nextTick()
+    })
+    searchCityRef!.addEventListener('blur', () => {
+      citysDivHidden = !citysDivHidden
     })
   })
 </script>
@@ -45,10 +51,20 @@
               class="bg-blue-200 h-8 px-2 py-1 rounded ml-2">查询
       </button>
     </div>
-    <div v-show="citysDivVisited"
-         class="relative top-1 left-[-28px] w-[250px] h-[200px] overflow-scroll flex flex-col
+    <div v-show="!citysDivHidden">
+      <div v-if="!haveData">
+        <span>无数据</span>
+      </div>
+      <div v-else
+           class="relative top-1 left-[-28px] w-[250px] h-[200px] overflow-scroll flex flex-col
                 border border-solid p-1.5 rounded">
-      <span v-for="city in citys">{{ city.country + ' - ' + city.name }}</span>
+      <span v-for="city in citys"
+            class="border-b p-1.5
+                   odd:bg-amber-100 even:bg-amber-50
+                   hover:bg-blue-300 hover:text-white">
+        {{ city.country + ' - ' + city.name }}
+      </span>
+      </div>
     </div>
   </div>
 </template>

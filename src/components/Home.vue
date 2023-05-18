@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  const menu = ref(['checkBrowser', 'volumeBar', 'tabBar', 'marqueeDiv', 'learnSCSS', 'weather'])
+  const menu = ref(['checkBrowser', 'volumeBar', 'tabBar', 'marqueeDiv', 'learnSCSS', 'weather', 'vrView'])
 
 </script>
 

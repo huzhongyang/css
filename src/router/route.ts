@@ -30,7 +30,11 @@ export const routes: RouteRecordRaw[] = [
                 name: 'weather',
                 path: 'weather',
                 component: () => import('../components/23-03-12/ZWeather.vue'),
-            },
+            },{
+                name:'vrView',
+                path:'vrView',
+                component:()=>import('../components/23-05-04/VrView.vue'),
+            }
         ],
     },
 
