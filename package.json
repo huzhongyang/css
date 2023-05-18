@@ -1,12 +1,14 @@
 {
   "name": "css",
-  "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "axios": "^1.4.0",
@@ -15,9 +17,11 @@
     "vue-router": "^4.2.0"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.38.6",
     "@iconify/json": "^2.2.66",
     "@vitejs/plugin-vue": "^4.2.3",
     "autoprefixer": "^10.4.14",
+    "eslint": "^8.40.0",
     "postcss": "^8.4.23",
     "sass": "^1.62.1",
     "tailwindcss": "^3.3.2",

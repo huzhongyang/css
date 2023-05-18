@@ -22,6 +22,7 @@ declare module '@vue/runtime-core' {
     ITablerUser: typeof import('~icons/tabler/user')['default']
     LearnSCSS: typeof import('./src/components/22-12-17/LearnSCSS.vue')['default']
     MarqueeDiv: typeof import('./src/components/22-09-21/MarqueeDiv.vue')['default']
+    PlumBlossom: typeof import('./src/components/PlumBlossom.vue')['default']
     PlumBossom: typeof import('./src/components/PlumBossom.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

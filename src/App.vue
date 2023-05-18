@@ -1,10 +1,9 @@
 <script setup lang="ts">
-
-    import Home from './components/Home.vue'</script>
+import Home from './components/Home.vue'
+</script>
 
 <template>
-	<router-view>
-		<home />
-	</router-view>
-
+  <router-view>
+    <Home />
+  </router-view>
 </template>

@@ -1,57 +1,58 @@
 <script setup lang="ts">
-    import { onMounted, Ref } from 'vue'
+import type { Ref } from 'vue'
+import { onMounted } from 'vue'
 
-    const liArr = ref() as Ref<HTMLLIElement[]>
-    onMounted(async () => {
-        liArr.value = Array.from(document.querySelectorAll('li'))
-    })
+const liArr = ref() as Ref<HTMLLIElement[]>
+onMounted(async () => {
+  liArr.value = Array.from(document.querySelectorAll('li'))
+})
 
-    function clickMe(id: number) {
-        for (const li of liArr.value) {
-            li.classList.remove('active')
-        }
-        liArr.value[id].classList.add('active')
-    }
+function clickMe(id: number) {
+  for (const li of liArr.value)
+    li.classList.remove('active')
+
+  liArr.value[id].classList.add('active')
+}
 </script>
 
 <template>
-	<div class="wrapper">
-		<div class="tab-bar">
-			<ul>
-				<li class="active" @click="clickMe(0)">
-					<a href="#">
-						<span class="icon"><i-tabler-home /></span>
-						<span class="text">Home</span>
-					</a>
-				</li>
-				<li @click="clickMe(1)">
-					<a href="#">
-						<span class="icon"><i-tabler-user /></span>
-						<span class="text">Profile</span>
-					</a>
-				</li>
-				<li @click="clickMe(2)">
-					<a href="#">
-						<span class="icon"><i-tabler-message-circle /></span>
-						<span class="text">Message</span>
-					</a>
-				</li>
-				<li @click="clickMe(3)">
-					<a href="#">
-						<span class="icon"><i-tabler-photo /></span>
-						<span class="text">Photo</span>
-					</a>
-				</li>
-				<li @click="clickMe(4)">
-					<a href="#">
-						<span class="icon"><i-tabler-settings /></span>
-						<span class="text">Setting</span>
-					</a>
-				</li>
-				<div class="indicator"></div>
-			</ul>
-		</div>
-	</div>
+  <div class="wrapper">
+    <div class="tab-bar">
+      <ul>
+        <li class="active" @click="clickMe(0)">
+          <a href="#">
+            <span class="icon"><i-tabler-home /></span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+        <li @click="clickMe(1)">
+          <a href="#">
+            <span class="icon"><i-tabler-user /></span>
+            <span class="text">Profile</span>
+          </a>
+        </li>
+        <li @click="clickMe(2)">
+          <a href="#">
+            <span class="icon"><i-tabler-message-circle /></span>
+            <span class="text">Message</span>
+          </a>
+        </li>
+        <li @click="clickMe(3)">
+          <a href="#">
+            <span class="icon"><i-tabler-photo /></span>
+            <span class="text">Photo</span>
+          </a>
+        </li>
+        <li @click="clickMe(4)">
+          <a href="#">
+            <span class="icon"><i-tabler-settings /></span>
+            <span class="text">Setting</span>
+          </a>
+        </li>
+        <div class="indicator" />
+      </ul>
+    </div>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -194,5 +195,4 @@
     ul li:nth-child(5).active ~ .indicator {
         transform: translateX(calc(70px * 2));
     }
-
 </style>

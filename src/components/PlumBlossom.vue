@@ -5,12 +5,10 @@
  -->
 
 <script lang="ts" setup>
-
 </script>
 
 <template>
-    <h1>generate plum bossom animation</h1>
-
+  <h1>generate plum blossom animation</h1>
 </template>
 
 <style scoped>

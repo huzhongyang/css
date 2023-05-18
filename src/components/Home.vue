@@ -1,7 +1,6 @@
 <script setup lang="ts">
-  const menu = ref(['checkBrowser', 'volumeBar', 'tabBar',
-      'marqueeDiv', 'learnSCSS', 'weather', 'vrView','plumBlossom'])
-
+const menu = ref(['checkBrowser', 'volumeBar', 'tabBar',
+  'marqueeDiv', 'learnSCSS', 'weather', 'vrView', 'plumBlossom'])
 </script>
 
 <template>
@@ -11,9 +10,11 @@
         <h2>Learn CSS</h2>
       </router-link>
       <div class="link-list">
-        <router-link v-for="(name,index) in menu"
-                     :key=index
-                     :to="{name}">
+        <router-link
+          v-for="(name, index) in menu"
+          :key="index"
+          :to="{ name }"
+        >
           {{ name }}
         </router-link>
       </div>
@@ -21,7 +22,7 @@
     <main>
       <!-- router-view 搭配 transition 写法 -->
 
-      <router-view v-slot="{Component}">
+      <router-view v-slot="{ Component }">
         <transition name="fade" mode="out-in">
           <component :is="Component" />
         </transition>

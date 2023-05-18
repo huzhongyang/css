@@ -1,20 +1,18 @@
 <script setup lang="ts">
+import type { Ref } from 'vue'
 
-    import { Ref } from 'vue'
-
-    const rangeInputRef = ref() as Ref<HTMLInputElement>
-    const volume = ref('25')
-
+const rangeInputRef = ref() as Ref<HTMLInputElement>
+const volume = ref('25')
 </script>
 
 <template>
-	<div class="wrapper">
-		<i-material-symbols-4k-plus-rounded />
-		<section>
-			<span>{{ volume }}</span>
-			<input v-model="volume" type="range" min="0" max="100" ref="rangeInputRef">
-		</section>
-	</div>
+  <div class="wrapper">
+    <i-material-symbols-4k-plus-rounded />
+    <section>
+      <span>{{ volume }}</span>
+      <input ref="rangeInputRef" v-model="volume" type="range" min="0" max="100">
+    </section>
+  </div>
 </template>
 
 <style scoped lang="scss">
@@ -57,7 +55,6 @@
         &::-webkit-slider-container {
             background-color: salmon;
         }
-
 
         /*
          ::-webkit-slider-runnable-track
