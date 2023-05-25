@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const menu = ref(['checkBrowser', 'volumeBar', 'tabBar',
-  'marqueeDiv', 'learnSCSS', 'weather', 'vrView', 'plumBlossom'])
+  'marqueeDiv', 'learnSCSS', 'weather', 'vrView', 'plumBlossom', 'zLoading'])
 </script>
 
 <template>
@@ -22,9 +22,9 @@ const menu = ref(['checkBrowser', 'volumeBar', 'tabBar',
     <main>
       <!-- router-view 搭配 transition 写法 -->
 
-      <router-view v-slot="{ Component }">
+      <router-view v-slot="{ Component, route }">
         <transition name="fade" mode="out-in">
-          <component :is="Component" />
+          <component :is="Component" :key="route.path" />
         </transition>
       </router-view>
     </main>

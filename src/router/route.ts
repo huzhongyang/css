@@ -39,6 +39,10 @@ export const routes: RouteRecordRaw[] = [
         name: 'plumBlossom',
         path: 'plumBlossom',
         component: () => import('../components/PlumBlossom.vue'),
+      }, {
+        name: 'zLoading',
+        path: 'zLoading',
+        component: () => import('../components/animations/ZLoading.vue'),
       },
     ],
   },

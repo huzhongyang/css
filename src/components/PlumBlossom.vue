@@ -5,10 +5,14 @@
  -->
 
 <script lang="ts" setup>
+const cvRef = ref<HTMLCanvasElement>()
 </script>
 
 <template>
-  <h1>generate plum blossom animation</h1>
+  <div>
+    <h1>generate plum blossom animation</h1>
+    <canvas ref="cvRef" class="w-[400px] h-[400px] border border-solid border-amber-300" />
+  </div>
 </template>
 
 <style scoped>
