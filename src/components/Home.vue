@@ -1,13 +1,16 @@
-<script setup lang="ts">
-const menu = ref(['checkBrowser', 'volumeBar', 'tabBar',
-  'marqueeDiv', 'learnSCSS', 'weather', 'vrView', 'plumBlossom', 'zLoading'])
+<script lang="ts" setup>
+const menu = ref(
+  ['checkBrowser', 'volumeBar', 'tabBar', 'marqueeDiv', 'learnSCSS', 'weather', 'vrView', 'plumBlossom', 'zLoading',
+  ])
 </script>
 
 <template>
   <div class="wrapper">
     <aside>
       <router-link to="/">
-        <h2>Learn CSS</h2>
+        <h2 class="w-full text-center text-[40px]">
+          {{ `💡🤔️` }}
+        </h2>
       </router-link>
       <div class="link-list">
         <router-link
@@ -23,7 +26,7 @@ const menu = ref(['checkBrowser', 'volumeBar', 'tabBar',
       <!-- router-view 搭配 transition 写法 -->
 
       <router-view v-slot="{ Component, route }">
-        <transition name="fade" mode="out-in">
+        <transition mode="out-in" name="fade">
           <component :is="Component" :key="route.path" />
         </transition>
       </router-view>
@@ -45,38 +48,41 @@ const menu = ref(['checkBrowser', 'volumeBar', 'tabBar',
   .wrapper {
     display: flex;
     flex-flow: row nowrap;
-    gap: 10px;
-
+    width: 100vw;
     height: 100vh;
+
     border-radius: 10px;
+    gap: 10px;
   }
 
   aside {
-    background-color: #dcc7c4;
     flex: 0 0 150px;
     padding: 15px;
+    background-color: #dcc7c4;
   }
 
   .link-list {
     display: flex;
+    overflow-y: scroll;
     flex-flow: column nowrap;
+    max-height: calc(100vh - 100px);
     gap: 5px;
   }
 
   a {
     text-decoration: none;
+    text-indent: 5px;
     color: black;
   }
 
   .link-list a {
-    background-color: cornflowerblue;
-    border-radius: 6px;
     padding: 4px;
+    border-radius: 6px;
+    background-color: cornflowerblue;
   }
 
   main {
-    flex: 1 0 auto;
-
-    padding: 15px;
+    flex: 1 1 calc(100vw - 150px);
+    padding: 10px;
   }
 </style>
